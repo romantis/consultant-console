@@ -1,0 +1,750 @@
+{
+  "fixture_version": "1.0.0",
+  "contract_schema": "../contracts/consultant-facilitation-brief.schema.json",
+  "case_id": "dense-cac-cpl-consultant-prep",
+  "purpose": "Verify that a dense metric becomes an actionable facilitation plan while preserving agenda coverage, source provenance, readiness uncertainty, and pre-workshop boundaries.",
+  "source_case": {
+    "metric_id": "metric-cac-cpl-dense",
+    "metric_name": "CAC & CPL Measurement",
+    "canonical_missing_evidence_count": 0,
+    "required_departments": [
+      "Finance",
+      "Marketing",
+      "Sales"
+    ],
+    "represented_departments": [
+      "Finance",
+      "Marketing"
+    ],
+    "agenda_topics": [
+      {
+        "id": "field:costs_included:material_conflict",
+        "kind": "must_resolve",
+        "field_key": "costs_included",
+        "label": "CAC/CPL cost components included"
+      },
+      {
+        "id": "field:lead_definition:material_conflict",
+        "kind": "must_resolve",
+        "field_key": "lead_definition",
+        "label": "CPL lead definition"
+      },
+      {
+        "id": "field:customer_definition:material_conflict",
+        "kind": "must_resolve",
+        "field_key": "customer_definition",
+        "label": "CAC customer acquisition point"
+      },
+      {
+        "id": "field:cost_timing:material_conflict",
+        "kind": "must_resolve",
+        "field_key": "cost_timing",
+        "label": "Cost-to-outcome timing alignment method"
+      },
+      {
+        "id": "field:deduplication_method:material_conflict",
+        "kind": "must_resolve",
+        "field_key": "deduplication_method",
+        "label": "Cross-campaign deduplication method"
+      },
+      {
+        "id": "field:overhead_handling:material_conflict",
+        "kind": "must_resolve",
+        "field_key": "overhead_handling",
+        "label": "Overhead and indirect cost treatment"
+      },
+      {
+        "id": "field:cac_example:material_conflict",
+        "kind": "must_resolve",
+        "field_key": "cac_example",
+        "label": "CAC/CPL calculation example"
+      },
+      {
+        "id": "field:cac_pain_points:decision_needed",
+        "kind": "needs_confirmation",
+        "field_key": "cac_pain_points",
+        "label": "CAC/CPL definition divergence points"
+      }
+    ],
+    "positions": {
+      "Finance": {
+        "costs_included": "Ad spend, marketing compensation, sales compensation, and overhead",
+        "lead_definition": "Marketing Qualified Lead",
+        "customer_definition": "First payment processed",
+        "cost_timing": "Cohort across the following one to three months",
+        "deduplication_method": "One lead per person using CRM contact ID and email",
+        "overhead_handling": "Fully loaded with quarterly G&A and RevOps allocation",
+        "reporting_intent": "A fully loaded board baseline tied to paying customers"
+      },
+      "Marketing": {
+        "costs_included": "Direct campaign media and tools",
+        "lead_definition": "Any net-new form fill or signup",
+        "customer_definition": "Contract signed or closed won",
+        "cost_timing": "Same-month campaign spend and outcomes",
+        "deduplication_method": "Each campaign touch counts separately",
+        "overhead_handling": "Exclude salaries, G&A, and RevOps overhead",
+        "reporting_intent": "Keep marketing operating views if the board definition is separately labeled"
+      }
+    },
+    "source_bindings": {
+      "source_item_ids": [
+        "field:costs_included:material_conflict",
+        "field:lead_definition:material_conflict",
+        "field:customer_definition:material_conflict",
+        "field:cost_timing:material_conflict",
+        "field:deduplication_method:material_conflict",
+        "field:overhead_handling:material_conflict",
+        "field:cac_example:material_conflict",
+        "field:cac_pain_points:decision_needed",
+        "readiness:required_department:sales"
+      ],
+      "citation_ids": [
+        "submitted_answer:finance:costs_included",
+        "submitted_answer:marketing:costs_included",
+        "submitted_answer:finance:lead_definition",
+        "submitted_answer:marketing:lead_definition",
+        "submitted_answer:finance:customer_definition",
+        "submitted_answer:marketing:customer_definition",
+        "submitted_answer:finance:cost_timing",
+        "submitted_answer:marketing:cost_timing",
+        "submitted_answer:finance:deduplication_method",
+        "submitted_answer:marketing:deduplication_method",
+        "submitted_answer:finance:overhead_handling",
+        "submitted_answer:marketing:overhead_handling",
+        "submitted_answer:finance:cac_example",
+        "submitted_answer:marketing:cac_example",
+        "submitted_answer:finance:cac_pain_points",
+        "submitted_answer:marketing:cac_pain_points",
+        "field_guidance:costs_included:prompt",
+        "field_guidance:lead_definition:prompt",
+        "field_guidance:customer_definition:prompt",
+        "field_guidance:cost_timing:prompt",
+        "field_guidance:deduplication_method:prompt",
+        "field_guidance:overhead_handling:prompt",
+        "field_guidance:cac_pain_points:prompt",
+        "metric_template:cac_cpl:required_department:sales"
+      ]
+    }
+  },
+  "reference_document": {
+    "schema_version": "2.0",
+    "status": "draft",
+    "metric_id": "metric-cac-cpl-dense",
+    "metric_name": "CAC & CPL Measurement",
+    "source_snapshot": {
+      "brief_fingerprint": "fixture:cac-cpl:dense:v1",
+      "generated_draft": {
+        "schema_version": "1.0",
+        "prompt_version": "1.2.1",
+        "profile_version": "1.0.2",
+        "draft_fingerprint": "fixture:cac-cpl:dense:draft:v1"
+      }
+    },
+    "coverage": {
+      "agenda_topic_ids": [
+        "field:costs_included:material_conflict",
+        "field:lead_definition:material_conflict",
+        "field:customer_definition:material_conflict",
+        "field:cost_timing:material_conflict",
+        "field:deduplication_method:material_conflict",
+        "field:overhead_handling:material_conflict",
+        "field:cac_example:material_conflict",
+        "field:cac_pain_points:decision_needed"
+      ],
+      "covered_topic_ids": [
+        "field:costs_included:material_conflict",
+        "field:lead_definition:material_conflict",
+        "field:customer_definition:material_conflict",
+        "field:cost_timing:material_conflict",
+        "field:deduplication_method:material_conflict",
+        "field:overhead_handling:material_conflict",
+        "field:cac_example:material_conflict",
+        "field:cac_pain_points:decision_needed"
+      ],
+      "omitted_topics": []
+    },
+    "workshop_thesis": {
+      "text": "Finance and Marketing are using different cost pools, lead denominators, customer acquisition events, timing windows, and deduplication rules. Finance wants a fully loaded board baseline, while Marketing wants to retain campaign operating views and is open to separate labels; the workshop must decide the reporting purpose and lock the implementation rules.",
+      "provenance": "source_backed",
+      "source_item_ids": [
+        "field:costs_included:material_conflict",
+        "field:lead_definition:material_conflict",
+        "field:customer_definition:material_conflict",
+        "field:cost_timing:material_conflict",
+        "field:deduplication_method:material_conflict",
+        "field:overhead_handling:material_conflict",
+        "field:cac_example:material_conflict",
+        "field:cac_pain_points:decision_needed"
+      ],
+      "citation_ids": [
+        "submitted_answer:finance:costs_included",
+        "submitted_answer:marketing:costs_included",
+        "submitted_answer:finance:lead_definition",
+        "submitted_answer:marketing:lead_definition",
+        "submitted_answer:finance:customer_definition",
+        "submitted_answer:marketing:customer_definition",
+        "submitted_answer:finance:cost_timing",
+        "submitted_answer:marketing:cost_timing",
+        "submitted_answer:finance:deduplication_method",
+        "submitted_answer:marketing:deduplication_method"
+      ]
+    },
+    "decisions_to_lock": [
+      {
+        "id": "decision:reporting-purpose-and-labels",
+        "title": "Official reporting purpose and labels",
+        "priority": "high",
+        "agenda_topic_ids": [
+          "field:cac_pain_points:decision_needed",
+          "field:cac_example:material_conflict"
+        ],
+        "field_keys": [
+          "cac_pain_points",
+          "cac_example"
+        ],
+        "decision_prompt": {
+          "text": "Agree which CAC/CPL view is official for board reporting, how operating variants will be labeled, and which example will validate the agreed definitions.",
+          "provenance": "source_backed",
+          "source_item_ids": [
+            "field:cac_pain_points:decision_needed",
+            "field:cac_example:material_conflict"
+          ],
+          "citation_ids": [
+            "submitted_answer:finance:cac_pain_points",
+            "submitted_answer:marketing:cac_pain_points",
+            "submitted_answer:finance:cac_example",
+            "submitted_answer:marketing:cac_example",
+            "field_guidance:cac_pain_points:prompt"
+          ]
+        }
+      },
+      {
+        "id": "decision:acquisition-cost-pool",
+        "title": "Acquisition cost pool and overhead treatment",
+        "priority": "high",
+        "agenda_topic_ids": [
+          "field:costs_included:material_conflict",
+          "field:overhead_handling:material_conflict"
+        ],
+        "field_keys": [
+          "costs_included",
+          "overhead_handling"
+        ],
+        "decision_prompt": {
+          "text": "Lock included cost categories, excluded categories, and the allocation rule for shared salaries, G&A, RevOps, software, and other indirect costs.",
+          "provenance": "source_backed",
+          "source_item_ids": [
+            "field:costs_included:material_conflict",
+            "field:overhead_handling:material_conflict"
+          ],
+          "citation_ids": [
+            "submitted_answer:finance:costs_included",
+            "submitted_answer:marketing:costs_included",
+            "submitted_answer:finance:overhead_handling",
+            "submitted_answer:marketing:overhead_handling",
+            "field_guidance:costs_included:prompt",
+            "field_guidance:overhead_handling:prompt"
+          ]
+        }
+      },
+      {
+        "id": "decision:cpl-denominator",
+        "title": "Official CPL lead denominator",
+        "priority": "high",
+        "agenda_topic_ids": [
+          "field:lead_definition:material_conflict"
+        ],
+        "field_keys": [
+          "lead_definition"
+        ],
+        "decision_prompt": {
+          "text": "Choose the official lead stage, qualification rules, and exceptions used in the CPL denominator.",
+          "provenance": "source_backed",
+          "source_item_ids": [
+            "field:lead_definition:material_conflict"
+          ],
+          "citation_ids": [
+            "submitted_answer:finance:lead_definition",
+            "submitted_answer:marketing:lead_definition",
+            "field_guidance:lead_definition:prompt"
+          ]
+        }
+      },
+      {
+        "id": "decision:cac-customer-event",
+        "title": "CAC customer acquisition event",
+        "priority": "high",
+        "agenda_topic_ids": [
+          "field:customer_definition:material_conflict"
+        ],
+        "field_keys": [
+          "customer_definition"
+        ],
+        "decision_prompt": {
+          "text": "Choose the event that makes a customer countable for official CAC and document delayed, failed, or reversed transactions.",
+          "provenance": "source_backed",
+          "source_item_ids": [
+            "field:customer_definition:material_conflict"
+          ],
+          "citation_ids": [
+            "submitted_answer:finance:customer_definition",
+            "submitted_answer:marketing:customer_definition",
+            "field_guidance:customer_definition:prompt"
+          ]
+        }
+      },
+      {
+        "id": "decision:timing-and-lookback",
+        "title": "Spend timing and lookback window",
+        "priority": "high",
+        "agenda_topic_ids": [
+          "field:cost_timing:material_conflict"
+        ],
+        "field_keys": [
+          "cost_timing"
+        ],
+        "decision_prompt": {
+          "text": "Lock same-period or cohort timing, the lookback window, and how late conversions are assigned.",
+          "provenance": "source_backed",
+          "source_item_ids": [
+            "field:cost_timing:material_conflict"
+          ],
+          "citation_ids": [
+            "submitted_answer:finance:cost_timing",
+            "submitted_answer:marketing:cost_timing",
+            "field_guidance:cost_timing:prompt"
+          ]
+        }
+      },
+      {
+        "id": "decision:deduplication-rule",
+        "title": "Person and campaign deduplication rule",
+        "priority": "high",
+        "agenda_topic_ids": [
+          "field:deduplication_method:material_conflict"
+        ],
+        "field_keys": [
+          "deduplication_method"
+        ],
+        "decision_prompt": {
+          "text": "Lock whether the denominator counts unique people or campaign touches and identify the matching keys used to enforce the rule.",
+          "provenance": "source_backed",
+          "source_item_ids": [
+            "field:deduplication_method:material_conflict"
+          ],
+          "citation_ids": [
+            "submitted_answer:finance:deduplication_method",
+            "submitted_answer:marketing:deduplication_method",
+            "field_guidance:deduplication_method:prompt"
+          ]
+        }
+      }
+    ],
+    "readiness_gaps": [
+      {
+        "id": "readiness:sales-perspective",
+        "scope": "workshop_readiness",
+        "kind": "missing_stakeholder_perspective",
+        "status": "open",
+        "related_decision_ids": [
+          "decision:cac-customer-event",
+          "decision:timing-and-lookback"
+        ],
+        "description": {
+          "text": "Sales is a required contributor for this metric template but is not represented in the current responses. Confirm a Sales participant or explicitly accept the missing perspective before the workshop.",
+          "provenance": "source_backed",
+          "source_item_ids": [
+            "readiness:required_department:sales"
+          ],
+          "citation_ids": [
+            "metric_template:cac_cpl:required_department:sales"
+          ]
+        }
+      },
+      {
+        "id": "readiness:crm-owner",
+        "scope": "workshop_readiness",
+        "kind": "missing_system_owner",
+        "status": "open",
+        "related_decision_ids": [
+          "decision:cpl-denominator",
+          "decision:deduplication-rule"
+        ],
+        "description": {
+          "text": "Confirm a CRM or RevOps owner who can validate MQL qualification, person matching keys, and whether the agreed denominator can be implemented consistently.",
+          "provenance": "system_suggested",
+          "source_item_ids": [
+            "field:lead_definition:material_conflict",
+            "field:deduplication_method:material_conflict"
+          ],
+          "citation_ids": [
+            "submitted_answer:finance:lead_definition",
+            "submitted_answer:finance:deduplication_method"
+          ]
+        }
+      },
+      {
+        "id": "readiness:billing-owner",
+        "scope": "workshop_readiness",
+        "kind": "missing_system_owner",
+        "status": "open",
+        "related_decision_ids": [
+          "decision:cac-customer-event",
+          "decision:timing-and-lookback"
+        ],
+        "description": {
+          "text": "Confirm a Billing or Finance Operations owner who can validate the first-payment event, reversals, and cohort lookback implementation.",
+          "provenance": "system_suggested",
+          "source_item_ids": [
+            "field:customer_definition:material_conflict",
+            "field:cost_timing:material_conflict"
+          ],
+          "citation_ids": [
+            "submitted_answer:finance:customer_definition",
+            "submitted_answer:finance:cost_timing"
+          ]
+        }
+      }
+    ],
+    "recommended_framing": [
+      {
+        "id": "framing:official-and-operating-views",
+        "review_status": "proposed",
+        "related_decision_ids": [
+          "decision:reporting-purpose-and-labels",
+          "decision:acquisition-cost-pool",
+          "decision:cpl-denominator"
+        ],
+        "recommendation": {
+          "text": "Frame the workshop around one official reporting baseline plus clearly labeled operating views. Treat the split as a proposal for discussion, not as an already approved metric taxonomy.",
+          "provenance": "system_suggested",
+          "source_item_ids": [
+            "field:cac_pain_points:decision_needed",
+            "field:costs_included:material_conflict",
+            "field:lead_definition:material_conflict"
+          ],
+          "citation_ids": [
+            "submitted_answer:finance:cac_pain_points",
+            "submitted_answer:marketing:cac_pain_points",
+            "submitted_answer:finance:costs_included",
+            "submitted_answer:marketing:costs_included"
+          ]
+        }
+      },
+      {
+        "id": "framing:purpose-before-formula",
+        "review_status": "proposed",
+        "related_decision_ids": [
+          "decision:reporting-purpose-and-labels",
+          "decision:acquisition-cost-pool",
+          "decision:cpl-denominator",
+          "decision:cac-customer-event"
+        ],
+        "recommendation": {
+          "text": "Resolve reporting purpose and labels before debating formula components so participants evaluate each choice against the same use case.",
+          "provenance": "system_suggested",
+          "source_item_ids": [
+            "field:cac_pain_points:decision_needed"
+          ],
+          "citation_ids": [
+            "submitted_answer:finance:cac_pain_points",
+            "submitted_answer:marketing:cac_pain_points",
+            "field_guidance:cac_pain_points:prompt"
+          ]
+        }
+      }
+    ],
+    "run_of_show": [
+      {
+        "id": "segment:framing",
+        "position": 1,
+        "duration_minutes": 10,
+        "title": "Confirm use cases and labels",
+        "decision_ids": [
+          "decision:reporting-purpose-and-labels"
+        ],
+        "purpose": {
+          "text": "Establish which decisions concern official reporting and which concern operating analysis.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "segment:cost-pool",
+        "position": 2,
+        "duration_minutes": 15,
+        "title": "Lock the acquisition cost pool",
+        "decision_ids": [
+          "decision:acquisition-cost-pool"
+        ],
+        "purpose": {
+          "text": "Resolve included costs and overhead allocation before testing example calculations.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "segment:cpl",
+        "position": 3,
+        "duration_minutes": 10,
+        "title": "Lock the CPL denominator",
+        "decision_ids": [
+          "decision:cpl-denominator"
+        ],
+        "purpose": {
+          "text": "Choose the official lead stage and qualification exceptions.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "segment:cac-event",
+        "position": 4,
+        "duration_minutes": 10,
+        "title": "Lock the CAC customer event",
+        "decision_ids": [
+          "decision:cac-customer-event"
+        ],
+        "purpose": {
+          "text": "Choose the countable customer event and edge-case treatment.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "segment:timing",
+        "position": 5,
+        "duration_minutes": 10,
+        "title": "Lock timing and lookback",
+        "decision_ids": [
+          "decision:timing-and-lookback"
+        ],
+        "purpose": {
+          "text": "Agree how spend and outcomes align across reporting periods.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "segment:deduplication",
+        "position": 6,
+        "duration_minutes": 10,
+        "title": "Lock deduplication",
+        "decision_ids": [
+          "decision:deduplication-rule"
+        ],
+        "purpose": {
+          "text": "Agree the counting unit and matching keys for repeat campaign engagement.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "segment:implementation",
+        "position": 7,
+        "duration_minutes": 10,
+        "title": "Assign validation owners",
+        "decision_ids": [
+          "decision:acquisition-cost-pool",
+          "decision:cpl-denominator",
+          "decision:cac-customer-event",
+          "decision:timing-and-lookback",
+          "decision:deduplication-rule"
+        ],
+        "purpose": {
+          "text": "Identify systems, owners, unresolved implementation inputs, and follow-up validation.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "segment:recap",
+        "position": 8,
+        "duration_minutes": 5,
+        "title": "Recap decisions and open actions",
+        "decision_ids": [],
+        "purpose": {
+          "text": "Restate what was decided, what remains open, and who owns each follow-up without recording decisions in the prep document.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      }
+    ],
+    "expected_outputs": [
+      {
+        "id": "output:reporting-labels",
+        "label": "Official and operating-view labels",
+        "status": "planned",
+        "decision_ids": [
+          "decision:reporting-purpose-and-labels"
+        ],
+        "description": {
+          "text": "Document the agreed reporting purpose and unambiguous labels for any retained variants.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "output:cost-pool",
+        "label": "Included and excluded cost rules",
+        "status": "planned",
+        "decision_ids": [
+          "decision:acquisition-cost-pool"
+        ],
+        "description": {
+          "text": "Capture cost categories, GL or cost-center boundaries, and overhead allocation rules.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "output:cpl-denominator",
+        "label": "CPL denominator definition",
+        "status": "planned",
+        "decision_ids": [
+          "decision:cpl-denominator"
+        ],
+        "description": {
+          "text": "Capture lead stage, qualification rules, exclusions, and the source system.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "output:cac-event",
+        "label": "CAC customer acquisition event",
+        "status": "planned",
+        "decision_ids": [
+          "decision:cac-customer-event"
+        ],
+        "description": {
+          "text": "Capture the countable customer event and edge cases such as failed or reversed payments.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "output:timing",
+        "label": "Timing and lookback rules",
+        "status": "planned",
+        "decision_ids": [
+          "decision:timing-and-lookback"
+        ],
+        "description": {
+          "text": "Capture reporting period alignment, cohort window, and late-conversion treatment.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "output:deduplication",
+        "label": "Deduplication rule and matching keys",
+        "status": "planned",
+        "decision_ids": [
+          "decision:deduplication-rule"
+        ],
+        "description": {
+          "text": "Capture the counting unit, matching keys, and repeat-touch treatment.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "output:worked-example",
+        "label": "One reconciled worked example",
+        "status": "planned",
+        "decision_ids": [
+          "decision:reporting-purpose-and-labels",
+          "decision:acquisition-cost-pool",
+          "decision:cpl-denominator",
+          "decision:cac-customer-event",
+          "decision:timing-and-lookback",
+          "decision:deduplication-rule"
+        ],
+        "description": {
+          "text": "Recalculate one shared period using the agreed rules to expose remaining implementation ambiguity.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      },
+      {
+        "id": "output:owners-and-actions",
+        "label": "Implementation owners and follow-up actions",
+        "status": "planned",
+        "decision_ids": [],
+        "description": {
+          "text": "Name the owners who will validate CRM, billing, allocation, and reporting implementation after the workshop.",
+          "provenance": "system_suggested",
+          "source_item_ids": [],
+          "citation_ids": []
+        }
+      }
+    ]
+  },
+  "expectations": {
+    "agenda_coverage": {
+      "topic_count": 8,
+      "required_covered_topic_ids": [
+        "field:costs_included:material_conflict",
+        "field:lead_definition:material_conflict",
+        "field:customer_definition:material_conflict",
+        "field:cost_timing:material_conflict",
+        "field:deduplication_method:material_conflict",
+        "field:overhead_handling:material_conflict",
+        "field:cac_example:material_conflict",
+        "field:cac_pain_points:decision_needed"
+      ],
+      "silent_omissions_allowed": false
+    },
+    "required_decision_dimensions": [
+      "reporting purpose and labels",
+      "acquisition cost pool and overhead",
+      "CPL lead denominator",
+      "CAC customer acquisition event",
+      "timing and lookback",
+      "cross-campaign deduplication"
+    ],
+    "required_readiness_gaps": [
+      "Sales stakeholder perspective",
+      "CRM or RevOps implementation owner",
+      "Billing or Finance Operations implementation owner"
+    ],
+    "readiness_gap_rule": "Readiness gaps remain workshop_readiness items and do not increase canonical missing_evidence_count.",
+    "required_provenance_states": [
+      "source_backed",
+      "system_suggested"
+    ],
+    "forbidden_claims": [
+      "Stakeholders have reached consensus.",
+      "Finance owns the official definition.",
+      "First payment is the approved customer event.",
+      "MQL is the approved CPL denominator.",
+      "The metric has been officially split into board and marketing variants.",
+      "Missing evidence count zero means the workshop is fully ready.",
+      "The preparation brief records or approves workshop decisions."
+    ],
+    "lifecycle_hard_gates": [
+      "A source fingerprint change produces needs_source_review.",
+      "Consultant-authored content survives source invalidation.",
+      "Discarding the generated draft does not delete the facilitation brief.",
+      "Refreshing generated content does not silently overwrite consultant-authored content.",
+      "No preparation action mutates metric or engagement state or records sign-off."
+    ],
+    "reference_document_is_golden_prose": false
+  }
+}

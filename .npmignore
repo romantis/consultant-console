@@ -1,0 +1,16 @@
+node_modules/
+dist/
+build/
+public/build/
+public/hot
+coverage/
+storage/
+bootstrap/cache/
+vendor/
+*.log
+*.cache
+.env
+.env.*
+resources/js/actions/
+resources/js/routes/
+resources/js/wayfinder/

@@ -1,0 +1,1465 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$responsibility\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Client/BuildClientMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$submitted_at\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Actions/Client/BuildClientMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 5
+			path: app/Actions/Client/BuildClientMetricDetail.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:metaFields\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Actions/Client/BuildClientMetricDetail.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:normalizedFields\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Actions/Client/BuildClientMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Actions/Client/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$form_schema_json\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Actions/Client/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Actions/Client/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$responsibility\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Client/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$template\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Actions/Client/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Actions/Client/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Method Illuminate\\Database\\Eloquent\\Model\:\:loadMissing\(\) invoked with 2 parameters, 1 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: app/Actions/Client/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Method Illuminate\\Database\\Eloquent\\Model\:\:loadMissing\(\) invoked with 3 parameters, 1 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: app/Actions/Client/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Actions/Engagements/LaunchEngagement.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$orgMetric\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Engagements/LaunchEngagement.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$participants\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Engagements/LaunchEngagement.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$role\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Engagements/LaunchEngagement.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Engagements/LaunchEngagement.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Engagements/LaunchEngagement.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$signed_off_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Engagements/SyncMetricParticipants.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Engagements/SyncMetricParticipants.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Engagements/SyncMetricParticipants.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\FormAssignment\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Engagements/UpdateEngagementStatus.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$canonicalMetric\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Engagements/UpdateEngagementStatus.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$key\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Engagements/UpdateEngagementStatus.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Engagements/UpdateEngagementStatus.php
+
+		-
+			message: '#^Relation ''user'' is not found in App\\Models\\FormAssignment model\.$#'
+			identifier: larastan.relationExistence
+			count: 2
+			path: app/Actions/Engagements/UpdateEngagementStatus.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Handbook/BuildHandbookExportPayload.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Actions/Handbook/BuildHandbookExportPayload.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$org_metric_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Handbook/SelectOfficialMetrics.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$signed_off_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Handbook/SelectOfficialMetrics.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$updated_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Handbook/SelectOfficialMetrics.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\PendingMembership\:\:\$organization\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Actions/Invitations/AcceptPendingInvitation.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Metrics/ComputeDiscrepancies.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$signed_off_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Metrics/MergeChangeProposal.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Metrics/OpenChangeProposal.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Metrics/OpenChangeProposal.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Actions/Metrics/OpenChangeProposal.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$signed_off_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Metrics/OpenChangeProposal.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$signed_off_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Metrics/ReassignMetricOwner.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/ApproveOrgMetricSignOff.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Metric\:\:\$last_used_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$description\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 5
+			path: app/Actions/OrgMetrics/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Actions/OrgMetrics/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$is_active\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$key\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 6
+			path: app/Actions/OrgMetrics/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Method Illuminate\\Database\\Eloquent\\Model\:\:loadMissing\(\) invoked with 2 parameters, 1 required\.$#'
+			identifier: arguments.count
+			count: 2
+			path: app/Actions/OrgMetrics/BuildOrgMetricDetail.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Metric\:\:\$engagement_status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/BuildOrgMetricsIndex.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Metric\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/BuildOrgMetricsIndex.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$key\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/BuildOrgMetricsIndex.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/BuildOrgMetricsIndex.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/CreateMergedOrgFinalDefinition.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/OrgMetrics/RequestOrgMetricSignOffChanges.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$membership\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Workshops/BuildWorkshopPayload.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$pendingMembership\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Workshops/BuildWorkshopPayload.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$responsibility\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Workshops/BuildWorkshopPayload.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Actions/Workshops/BuildWorkshopPayload.php
+
+		-
+			message: '#^Called ''Model\:\:make\(\)'' which performs unnecessary work, use ''new Model\(\)''\.$#'
+			identifier: larastan.noModelMake
+			count: 1
+			path: app/Actions/Workshops/BuildWorkshopPayload.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagementParticipant\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Actions/Workshops/DispatchWorkshopSessionNotifications.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement_participant_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Actions/Workshops/DispatchWorkshopSessionNotifications.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Actions/Workshops/DispatchWorkshopSessionNotifications.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$decision_snapshot\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Workshops/RecordWorkshop.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$facilitator_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Workshops/RecordWorkshop.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$notes\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Workshops/RecordWorkshop.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$scheduled_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Workshops/RecordWorkshop.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$session_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Workshops/RecordWorkshop.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$transcript_url\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Workshops/RecordWorkshop.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement_participant_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Actions/Workshops/UpdateEngagementWorkshopSession.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$owner_participant_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Actions/Workshops/ValidateWorkshopSessionCoverage.php
+
+		-
+			message: '#^Called ''env'' outside of the config directory which returns null when the config is cached, use ''config''\.$#'
+			identifier: larastan.noEnvCallsOutsideOfConfig
+			count: 1
+			path: app/Console/Commands/VectorHealth.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement_participant_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Client/EngagementWorkshopController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$metric_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Http/Controllers/Client/EngagementWorkshopController.php
+
+		-
+			message: '#^Cannot cast App\\Enums\\EngagementWorkshopSessionStatus to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: app/Http/Controllers/Client/EngagementWorkshopController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\FormAssignment\:\:\$participant\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Client/FormsController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$submitted_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Client/FormsController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\FormAssignment\:\:\$submission_submitted_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Client/HandbookController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Client/HandbookController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$responsibility\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Client/HandbookController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$signed_off_at\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Http/Controllers/Client/HandbookController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Client/HandbookController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Client/HandbookController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Client/HandbookController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Client/MetricDetailController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$submitted_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/DashboardController.php
+
+		-
+			message: '#^Relation ''participant'' is not found in App\\Models\\FormAssignment model\.$#'
+			identifier: larastan.relationExistence
+			count: 1
+			path: app/Http/Controllers/DashboardController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Engagement\:\:\$completed_forms_count\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Engagement\:\:\$in_progress_forms_count\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Engagement\:\:\$metrics_awaiting_forms_count\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Engagement\:\:\$metrics_deprecated_count\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Engagement\:\:\$metrics_finalized_count\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Engagement\:\:\$metrics_in_review_count\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Engagement\:\:\$metrics_in_workshop_count\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Engagement\:\:\$open_forms_count\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Metric\:\:\$engagement_status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Metric\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/EngagementController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/FinalDefinitionController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$signed_off_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/FinalDefinitionController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/FinalDefinitionController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\FormAssignment\:\:\$submission_submitted_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/FormController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/FormController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/FormController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/FormController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Http/Controllers/FormController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/HandbookExportController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$definition_json\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/MetricChangeGovernanceController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Http/Controllers/MetricChangeGovernanceController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Http/Controllers/MetricChangeGovernanceController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/MetricChangeGovernanceController.php
+
+		-
+			message: '#^Cannot cast App\\Enums\\MetricStatus to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: app/Http/Controllers/MetricChangeGovernanceController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/MetricController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/MetricController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$description\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/MetricLibraryController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/MetricLibraryController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$key\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/MetricLibraryController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/MetricLibraryController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$role\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementParticipantController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementParticipantController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementParticipantController.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\FormAssignment\:\:\$submission_submitted_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$affiliation\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$ends_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$facilitatorMembership\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$facilitator_membership_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$finalDefinition\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 6
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$last_submitted_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$metrics\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 7
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$notes\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$participants\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$starts_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$template\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$timezone\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$window\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementShowController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement_participant_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementWorkshopController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$metric_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Http/Controllers/Organization/EngagementWorkshopController.php
+
+		-
+			message: '#^Cannot cast App\\Enums\\EngagementWorkshopSessionStatus to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementWorkshopController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement_participant_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementWorkshopSessionController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$metric_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementWorkshopSessionController.php
+
+		-
+			message: '#^Cannot cast App\\Enums\\EngagementWorkshopSessionStatus to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementWorkshopSessionController.php
+
+		-
+			message: '#^Cannot cast App\\Enums\\EngagementWorkshopSessionStatus to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: app/Http/Controllers/Organization/EngagementWorkshopSessionTransitionController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/HandbookExportIndexController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/Organization/HandbookExportIndexController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/OrganizationController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/OrganizationController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/OrganizationController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$role\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/OrganizationController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Http/Controllers/OrganizationController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/OrganizationMemberController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$affiliation\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Http/Controllers/OrganizationSettingsController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$created_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/OrganizationSettingsController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 5
+			path: app/Http/Controllers/OrganizationSettingsController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/OrganizationSettingsController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Http/Controllers/OrganizationSettingsController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/Http/Controllers/OrganizationSettingsController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$role\.$#'
+			identifier: property.notFound
+			count: 5
+			path: app/Http/Controllers/OrganizationSettingsController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Http/Controllers/OrganizationSettingsController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/OrganizationSettingsController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/WorkshopController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Http/Controllers/WorkshopController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Controllers/WorkshopController.php
+
+		-
+			message: '#^Cannot cast App\\Enums\\MembershipRole to string\.$#'
+			identifier: cast.string
+			count: 2
+			path: app/Http/Controllers/WorkshopController.php
+
+		-
+			message: '#^Cannot cast App\\Enums\\StakeholderRole to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: app/Http/Controllers/WorkshopController.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Http/Middleware/HandleInertiaRequests.php
+
+		-
+			message: '#^Cannot unset offset ''can_manage'' on array\{id\: string, name\: string, slug\: string, owned\: bool\}\.$#'
+			identifier: unset.offset
+			count: 1
+			path: app/Http/Middleware/HandleInertiaRequests.php
+
+		-
+			message: '#^Cannot unset offset ''role'' on array\{id\: string, name\: string, slug\: string, owned\: bool\}\.$#'
+			identifier: unset.offset
+			count: 1
+			path: app/Http/Middleware/HandleInertiaRequests.php
+
+		-
+			message: '#^Called ''Model\:\:make\(\)'' which performs unnecessary work, use ''new Model\(\)''\.$#'
+			identifier: larastan.noModelMake
+			count: 1
+			path: app/Http/Requests/UpdateFinalDefinitionRequest.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Jobs/NotifyChangeProposalApprovers.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Jobs/NotifyChangeProposalApprovers.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Jobs/NotifyEngagementStatusAutoAdvance.php
+
+		-
+			message: '#^Relation ''metric'' is not found in App\\Models\\FormAssignment model\.$#'
+			identifier: larastan.relationExistence
+			count: 3
+			path: app/Jobs/ProcessAssignmentReminders.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagementParticipant\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Jobs/ProcessWorkshopSessionReminders.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Jobs/ProcessWorkshopSessionReminders.php
+
+		-
+			message: '#^Cannot cast App\\Enums\\MembershipRole to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: app/Jobs/SendEngagementInvites.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Models/FinalDefinition.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Models/FinalDefinition.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Models/FinalDefinition.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Models/FinalDefinition.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Models/FinalDefinition.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\FormAssignment\:\:\$metric\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Models/FormAssignment.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:touchDefinitionsChanged\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: app/Models/MetricDefinition.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Notifications/ChangeProposalReviewRequested.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Notifications/EngagementStatusAutoAdvanced.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Notifications/OrgMetricSignOffApproved.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Notifications/OrgMetricSignOffApproved.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Notifications/OrgMetricSignOffChangesRequested.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Notifications/OrgMetricSignOffChangesRequested.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\PendingMembership\:\:\$inviter\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Notifications/PendingMembershipInvited.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\PendingMembership\:\:\$organization\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Notifications/PendingMembershipInvited.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Notifications/WorkshopSessionCanceledNotification.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Notifications/WorkshopSessionInviteNotification.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Notifications/WorkshopSessionReminderNotification.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Notifications/WorkshopSessionUninvitedNotification.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Notifications/WorkshopSessionUpdatedNotification.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Policies/DiscrepancyPolicy.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Policies/FinalDefinitionPolicy.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Policies/FinalDefinitionPolicy.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Policies/MetricDefinitionPolicy.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Policies/MetricParticipantPolicy.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Policies/OrgFinalDefinitionPolicy.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Services/Engagements/StakeholderInvitationService.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$role\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Services/Engagements/StakeholderInvitationService.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Services/Engagements/StakeholderInvitationService.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Organization\:\:\$active_engagements_count\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Services/Owner/OwnerDashboardService.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Organization\:\:\$completed_engagements_count\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Services/Owner/OwnerDashboardService.php
+
+		-
+			message: '#^Access to an undefined property App\\Models\\Organization\:\:\$draft_engagements_count\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Services/Owner/OwnerDashboardService.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$form_schema_json\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Support/Metrics/FieldOptionLabelResolver.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$created_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Support/Metrics/FieldRoleSchema.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$form_schema_json\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Support/Metrics/FieldRoleSchema.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:metaFields\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Support/Metrics/FieldRoleSchema.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:normalizedFields\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Support/Metrics/FieldRoleSchema.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$signed_off_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Support/Metrics/FinalDefinitionProgress.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$definition_json\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Support/Metrics/FinalDefinitionRequirements.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Support/Metrics/FinalDefinitionRequirements.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:normalizedFields\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Support/Metrics/FinalDefinitionRequirements.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Support/Metrics/MetricDefinitionService.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$metric\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Support/Metrics/MetricDefinitionService.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Support/Metrics/MetricDefinitionService.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$template_key\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Support/Metrics/MetricDefinitionService.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Support/Metrics/MetricDefinitionService.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$user\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Support/Notifications/ReminderDispatcher.php
+
+		-
+			message: '#^Variable \$ascii on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.variable
+			count: 1
+			path: app/Support/Pdf/SimplePdf.php
+
+		-
+			message: '#^Variable \$pageRefs in empty\(\) always exists and is not falsy\.$#'
+			identifier: empty.variable
+			count: 1
+			path: app/Support/Pdf/SimplePdf.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$metric_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Support/Workshops/WorkshopSessionMetricLinks.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: database/factories/ChangeProposalFactory.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 5
+			path: database/factories/ChangeProposalFactory.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 4
+			path: database/factories/EngagementWorkshopSessionFactory.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: database/factories/FormAssignmentFactory.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization\.$#'
+			identifier: property.notFound
+			count: 2
+			path: database/factories/MetricFactory.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: database/factories/MetricFactory.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$engagement_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: database/factories/ReconciliationWorkshopFactory.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Model\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: database/factories/ReconciliationWorkshopFactory.php

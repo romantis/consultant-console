@@ -1,0 +1,16 @@
+.git/
+node_modules/
+vendor/
+storage/
+bootstrap/cache/
+public/build/
+public/hot
+Dockerfile*
+.dockerignore
+*.log*
+.env*
+coverage/
+composer.lock
+package-lock.json
+pnpm-lock.yaml
+yarn.lock

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Client console after split</title>
+  <desc id="desc">Diagram showing ClientLayout with dedicated navigation, engagement switcher, and org-level handbook exports.</desc>
+  <rect x="0" y="0" width="960" height="540" fill="#ecfccb" />
+  <rect x="48" y="48" width="864" height="444" rx="32" fill="#ffffff" stroke="#84cc16" stroke-width="2" />
+  <text x="72" y="88" font-family="'Inter', sans-serif" font-size="20" font-weight="700" fill="#3f6212">
+    Client View — After
+  </text>
+  <rect x="84" y="116" width="220" height="360" rx="18" fill="#14532d" />
+  <text x="104" y="150" font-size="15" font-family="'Inter', sans-serif" fill="#bef264" font-weight="600">
+    ClientSidebar
+  </text>
+  <text x="104" y="180" font-size="12" fill="#d9f99d" font-family="'Inter', sans-serif">
+    ▸ My Work
+  </text>
+  <text x="104" y="204" font-size="12" fill="#d9f99d" font-family="'Inter', sans-serif">
+    ▸ Forms
+  </text>
+  <text x="104" y="228" font-size="12" fill="#d9f99d" font-family="'Inter', sans-serif">
+    ▸ Next Steps
+  </text>
+  <text x="104" y="252" font-size="12" fill="#d9f99d" font-family="'Inter', sans-serif">
+    ▸ Metrics
+  </text>
+  <text x="104" y="276" font-size="12" fill="#d9f99d" font-family="'Inter', sans-serif">
+    ▸ Handbook (org-level) + Support
+  </text>
+  <rect x="340" y="120" width="520" height="340" rx="24" fill="#fefce8" />
+  <text x="360" y="160" font-size="22" font-family="'Inter', sans-serif" fill="#3f6212" font-weight="600">
+    ClientLayout
+  </text>
+  <text x="360" y="198" font-size="14" font-family="'Inter', sans-serif" fill="#4d7c0f">
+    Layout renders EngagementSwitcher, dashboards, and reminder widgets
+    with no staff-only controls. Handbook exports stay org-level while
+    metrics/forms follow the active engagement. Middleware ensures only
+    members or impersonating staff reach this surface.
+  </text>
+  <rect x="360" y="246" width="240" height="140" rx="20" fill="#d9f99d" stroke="#84cc16" />
+  <text x="380" y="278" font-size="14" font-family="'Inter', sans-serif" fill="#365314" font-weight="600">
+    EngagementSwitcher
+  </text>
+  <text x="380" y="306" font-size="13" font-family="'Inter', sans-serif" fill="#3f6212">
+    Keyboard focusable select that triggers router.visit
+    when members choose a new engagement; handbook exports stay org-level.
+  </text>
+</svg>

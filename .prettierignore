@@ -1,0 +1,17 @@
+resources/js/components/ui/*
+resources/js/actions
+resources/js/routes
+resources/js/wayfinder
+resources/views/mail/*
+node_modules/
+dist/
+build/
+public/build/
+public/hot
+coverage/
+vendor/
+bootstrap/cache/
+storage/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

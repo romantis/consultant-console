@@ -1,0 +1,13 @@
+* text=auto eol=lf
+
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+CHANGELOG.md export-ignore
+/.agents export-ignore
+/AGENTS.md export-ignore
+/.codexignore export-ignore
+/SHOWCASE-PUBLISH.md export-ignore

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Client console before split</title>
+  <desc id="desc">Diagram showing how members were forced through the consultant shell.</desc>
+  <rect x="0" y="0" width="960" height="540" fill="#fff1f2" />
+  <rect x="48" y="48" width="864" height="444" rx="32" fill="#ffffff" stroke="#fda4af" stroke-width="2" />
+  <text x="72" y="88" font-family="'Inter', sans-serif" font-size="20" font-weight="700" fill="#be123c">
+    Client View — Before
+  </text>
+  <rect x="84" y="116" width="200" height="360" rx="18" fill="#1f2937" />
+  <text x="104" y="150" font-size="14" font-family="'Inter', sans-serif" fill="#f472b6">
+    Consultant nav leaked to members
+  </text>
+  <text x="104" y="174" font-size="12" fill="#fecdd3" font-family="'Inter', sans-serif">
+    • Owner Console links
+  </text>
+  <text x="104" y="198" font-size="12" fill="#fecdd3" font-family="'Inter', sans-serif">
+    • Impersonation CTA
+  </text>
+  <text x="104" y="222" font-size="12" fill="#fecdd3" font-family="'Inter', sans-serif">
+    • Setup reminders + client forms
+  </text>
+  <rect x="320" y="120" width="520" height="340" rx="24" fill="#fee2e2" />
+  <text x="340" y="160" font-size="22" font-family="'Inter', sans-serif" fill="#be123c" font-weight="600">
+    Lack of dedicated ClientLayout
+  </text>
+  <text x="340" y="198" font-size="14" font-family="'Inter', sans-serif" fill="#9f1239">
+    Members navigated through consultant chrome which caused
+    confusion about what actions they were authorized to take.
+  </text>
+  <rect x="340" y="236" width="520" height="140" rx="20" fill="#ffe4e6" stroke="#fb7185" />
+  <text x="360" y="270" font-size="14" font-family="'Inter', sans-serif" fill="#be123c" font-weight="600">
+    Result
+  </text>
+  <text x="360" y="298" font-size="13" font-family="'Inter', sans-serif" fill="#be123c">
+    ▸ Members accidentally opened staff screens
+  </text>
+  <text x="360" y="324" font-size="13" font-family="'Inter', sans-serif" fill="#be123c">
+    ▸ No dedicated workspace (My Work, Next Steps, Metrics)
+  </text>
+</svg>

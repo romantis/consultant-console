@@ -1,0 +1,128 @@
+.client-metric-handbook {
+    font-family:
+        'Source Serif 4', 'Iowan Old Style', 'Palatino Linotype', serif;
+}
+
+.client-metric-handbook__section {
+    border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+    padding-bottom: 2rem;
+}
+
+.client-metric-handbook__section:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.client-metric-handbook__section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.client-metric-handbook__item {
+    display: block;
+}
+
+.client-metric-handbook__label {
+    font-size: 1.16rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0.35rem;
+}
+
+.client-metric-handbook__value {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: hsl(var(--foreground));
+    opacity: 0.95;
+}
+
+.client-metric-handbook__companions {
+    margin-top: 0.75rem;
+    border-left: 1px dashed rgba(148, 163, 184, 0.6);
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.client-metric-handbook__companion-label {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 0.2rem;
+}
+
+.client-metric-handbook__companion-value {
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: hsl(var(--foreground));
+    opacity: 0.88;
+}
+
+.client-metric-handbook__timeline {
+    display: grid;
+    gap: 1.25rem;
+    margin-left: 0.35rem;
+    margin-top: 1.5rem;
+    border-left: 1px solid rgba(148, 163, 184, 0.4);
+    padding-left: 1.25rem;
+}
+
+.client-metric-handbook__timeline-item {
+    position: relative;
+    display: grid;
+    gap: 0.35rem;
+}
+
+.client-metric-handbook__timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0.4rem;
+    left: -1.58rem;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 9999px;
+    background: rgba(71, 85, 105, 0.9);
+    box-shadow: 0 0 0 4px rgba(248, 250, 252, 0.95);
+}
+
+.client-metric-handbook__detail-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.client-metric-handbook__detail-row {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.client-metric-handbook__detail-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+}
+
+.client-metric-handbook__detail-value {
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: hsl(var(--foreground));
+}
+
+@media (max-width: 640px) {
+    .client-metric-handbook__section-title {
+        font-size: 1.3rem;
+    }
+
+    .client-metric-handbook__label {
+        font-size: 1.06rem;
+    }
+
+    .client-metric-handbook__value {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Consultant console before the split</title>
+  <desc id="desc">Screenshot-style diagram showing how consultant and client nav once mingled inside a single layout.</desc>
+  <rect x="0" y="0" width="960" height="540" fill="#f8fafc" />
+  <rect x="48" y="48" width="864" height="444" rx="32" fill="#ffffff" stroke="#cbd5f5" stroke-width="2" />
+  <rect x="84" y="96" width="200" height="360" rx="16" fill="#0f172a" opacity="0.9" />
+  <text x="84" y="80" font-family="'Inter', 'Segoe UI', sans-serif" font-size="20" fill="#0f172a" font-weight="700">
+    Consultant Console — Before
+  </text>
+  <text x="115" y="130" font-size="16" font-family="'Inter', sans-serif" fill="#f8fafc" font-weight="600">
+    Mixed Navigation
+  </text>
+  <text x="115" y="160" font-size="13" fill="#cbd5f5" font-family="'Inter', sans-serif">
+    • Owner Console
+  </text>
+  <text x="115" y="188" font-size="13" fill="#cbd5f5" font-family="'Inter', sans-serif">
+    • Consultant Workspace
+  </text>
+  <text x="115" y="216" font-size="13" fill="#cbd5f5" font-family="'Inter', sans-serif">
+    • Client Forms + Next Steps
+  </text>
+  <text x="115" y="244" font-size="13" fill="#cbd5f5" font-family="'Inter', sans-serif">
+    • Handbook &amp; Support (staff scope)
+  </text>
+  <rect x="320" y="96" width="540" height="360" rx="24" fill="#e2e8f0" />
+  <text x="342" y="140" font-size="24" font-family="'Inter', sans-serif" fill="#0f172a" font-weight="700">
+    Shared AppShell
+  </text>
+  <text x="342" y="180" font-size="15" font-family="'Inter', sans-serif" fill="#475569">
+    Before the split, contributors and consultants shared
+    the same AppShell, so members could see staff-only
+    navigation, impersonation toggles, and setup calls-to-action.
+  </text>
+  <rect x="342" y="240" width="496" height="96" rx="16" fill="#fef3c7" stroke="#fbbf24" />
+  <text x="362" y="272" font-size="14" font-family="'Inter', sans-serif" fill="#92400e" font-weight="600">
+    Risk: Members encountered impersonation controls.
+  </text>
+  <text x="362" y="300" font-size="13" font-family="'Inter', sans-serif" fill="#b45309">
+    Needed a clean client layout + navigation scope guard.
+  </text>
+</svg>

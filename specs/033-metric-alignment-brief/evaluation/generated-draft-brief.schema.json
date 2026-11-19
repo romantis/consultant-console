@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://metric-harmony.local/schemas/generated-draft-brief.schema.json",
+  "title": "Generated Draft Brief",
+  "description": "Review-only, source-backed synthesis for consultant workshop preparation.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "metric_id",
+    "metric_name",
+    "summary",
+    "resolution_focus",
+    "supporting_context"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "status": {
+      "const": "draft"
+    },
+    "metric_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "metric_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "$ref": "#/$defs/citedSummary"
+    },
+    "resolution_focus": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "$ref": "#/$defs/resolutionFocusItem"
+      }
+    },
+    "supporting_context": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "$ref": "#/$defs/supportingContextItem"
+      }
+    }
+  },
+  "$defs": {
+    "identifierList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "citationIds": {
+      "$ref": "#/$defs/identifierList"
+    },
+    "citedSummary": {
+      "type": "object",
+      "required": [
+        "text",
+        "citation_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 600
+        },
+        "citation_ids": {
+          "$ref": "#/$defs/citationIds"
+        }
+      }
+    },
+    "facilitatorQuestion": {
+      "type": "object",
+      "required": [
+        "question",
+        "reason",
+        "source_question_ids",
+        "citation_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "question": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "source_question_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "citation_ids": {
+          "$ref": "#/$defs/citationIds"
+        }
+      }
+    },
+    "candidateResolutionPath": {
+      "type": "object",
+      "required": [
+        "label",
+        "description",
+        "source_option_ids",
+        "citation_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "source_option_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "citation_ids": {
+          "$ref": "#/$defs/citationIds"
+        }
+      }
+    },
+    "resolutionFocusItem": {
+      "type": "object",
+      "required": [
+        "field_key",
+        "kind",
+        "title",
+        "synthesis",
+        "source_item_ids",
+        "citation_ids",
+        "facilitator_questions",
+        "candidate_resolution_paths"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "field_key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "must_resolve",
+            "missing_evidence",
+            "needs_confirmation"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "synthesis": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "source_item_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "citation_ids": {
+          "$ref": "#/$defs/citationIds"
+        },
+        "facilitator_questions": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/facilitatorQuestion"
+          }
+        },
+        "candidate_resolution_paths": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/candidateResolutionPath"
+          }
+        }
+      }
+    },
+    "supportingContextItem": {
+      "type": "object",
+      "required": [
+        "field_key",
+        "kind",
+        "note",
+        "source_item_ids",
+        "citation_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "field_key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "context_signal",
+            "likely_non_issue"
+          ]
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "source_item_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "citation_ids": {
+          "$ref": "#/$defs/citationIds"
+        }
+      }
+    }
+  }
+}

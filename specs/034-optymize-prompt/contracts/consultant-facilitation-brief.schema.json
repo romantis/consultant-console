@@ -1,0 +1,467 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://metric-harmony.local/schemas/consultant-facilitation-brief.schema.json",
+  "title": "Consultant Facilitation Brief",
+  "description": "Shared, editable preparation document for a metric alignment workshop.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "metric_id",
+    "metric_name",
+    "source_snapshot",
+    "coverage",
+    "workshop_thesis",
+    "decisions_to_lock",
+    "readiness_gaps",
+    "recommended_framing",
+    "run_of_show",
+    "expected_outputs"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "ready_for_workshop",
+        "needs_source_review"
+      ]
+    },
+    "metric_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "metric_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_snapshot": {
+      "$ref": "#/$defs/sourceSnapshot"
+    },
+    "coverage": {
+      "$ref": "#/$defs/coverage"
+    },
+    "workshop_thesis": {
+      "$ref": "#/$defs/contentBlock"
+    },
+    "decisions_to_lock": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/decisionToLock"
+      }
+    },
+    "readiness_gaps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/readinessGap"
+      }
+    },
+    "recommended_framing": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/recommendedFraming"
+      }
+    },
+    "run_of_show": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/runOfShowItem"
+      }
+    },
+    "expected_outputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/expectedOutput"
+      }
+    }
+  },
+  "$defs": {
+    "identifierList": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "nonEmptyIdentifierList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "sourceSnapshot": {
+      "type": "object",
+      "required": [
+        "brief_fingerprint",
+        "generated_draft"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "brief_fingerprint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "generated_draft": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "schema_version",
+            "prompt_version",
+            "profile_version",
+            "draft_fingerprint"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "schema_version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "prompt_version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "profile_version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "draft_fingerprint": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "contentBlock": {
+      "type": "object",
+      "required": [
+        "text",
+        "provenance",
+        "source_item_ids",
+        "citation_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "provenance": {
+          "type": "string",
+          "enum": [
+            "source_backed",
+            "system_suggested",
+            "consultant_authored",
+            "recorded_decision"
+          ]
+        },
+        "source_item_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "citation_ids": {
+          "$ref": "#/$defs/identifierList"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "provenance": {
+                "const": "source_backed"
+              }
+            },
+            "required": [
+              "provenance"
+            ]
+          },
+          "then": {
+            "properties": {
+              "source_item_ids": {
+                "$ref": "#/$defs/nonEmptyIdentifierList"
+              },
+              "citation_ids": {
+                "$ref": "#/$defs/nonEmptyIdentifierList"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "provenance": {
+                "const": "recorded_decision"
+              }
+            },
+            "required": [
+              "provenance"
+            ]
+          },
+          "then": {
+            "properties": {
+              "citation_ids": {
+                "$ref": "#/$defs/nonEmptyIdentifierList"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "suggestionBlock": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/contentBlock"
+        },
+        {
+          "properties": {
+            "provenance": {
+              "type": "string",
+              "enum": [
+                "system_suggested",
+                "consultant_authored"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "omittedTopic": {
+      "type": "object",
+      "required": [
+        "agenda_topic_id",
+        "reason"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "agenda_topic_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "$ref": "#/$defs/contentBlock"
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "agenda_topic_ids",
+        "covered_topic_ids",
+        "omitted_topics"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "agenda_topic_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "covered_topic_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "omitted_topics": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/omittedTopic"
+          }
+        }
+      }
+    },
+    "decisionToLock": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "priority",
+        "agenda_topic_ids",
+        "field_keys",
+        "decision_prompt"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 180
+        },
+        "priority": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "agenda_topic_ids": {
+          "$ref": "#/$defs/nonEmptyIdentifierList"
+        },
+        "field_keys": {
+          "$ref": "#/$defs/nonEmptyIdentifierList"
+        },
+        "decision_prompt": {
+          "$ref": "#/$defs/contentBlock"
+        }
+      }
+    },
+    "readinessGap": {
+      "type": "object",
+      "required": [
+        "id",
+        "scope",
+        "kind",
+        "status",
+        "related_decision_ids",
+        "description"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "const": "workshop_readiness"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "missing_stakeholder_perspective",
+            "missing_system_owner",
+            "missing_implementation_input",
+            "missing_supporting_artifact",
+            "missing_approver"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "open",
+            "resolved",
+            "accepted_risk"
+          ]
+        },
+        "related_decision_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "description": {
+          "$ref": "#/$defs/contentBlock"
+        }
+      }
+    },
+    "recommendedFraming": {
+      "type": "object",
+      "required": [
+        "id",
+        "review_status",
+        "related_decision_ids",
+        "recommendation"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "proposed",
+            "accepted_for_facilitation",
+            "rejected"
+          ]
+        },
+        "related_decision_ids": {
+          "$ref": "#/$defs/nonEmptyIdentifierList"
+        },
+        "recommendation": {
+          "$ref": "#/$defs/suggestionBlock"
+        }
+      }
+    },
+    "runOfShowItem": {
+      "type": "object",
+      "required": [
+        "id",
+        "position",
+        "duration_minutes",
+        "title",
+        "decision_ids",
+        "purpose"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "position": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "duration_minutes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 180
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 180
+        },
+        "decision_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "purpose": {
+          "$ref": "#/$defs/suggestionBlock"
+        }
+      }
+    },
+    "expectedOutput": {
+      "type": "object",
+      "required": [
+        "id",
+        "label",
+        "status",
+        "decision_ids",
+        "description"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 180
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "planned",
+            "prepared"
+          ]
+        },
+        "decision_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "description": {
+          "$ref": "#/$defs/suggestionBlock"
+        }
+      }
+    }
+  }
+}

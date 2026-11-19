@@ -1,0 +1,1134 @@
+{
+  "dataset_version": "1.0.0",
+  "language": "en",
+  "input_schema": "../contracts/metric-alignment-brief.schema.json",
+  "output_schema": "generated-draft-brief.schema.json",
+  "cases": [
+    {
+      "id": "material-conflict-with-guidance",
+      "purpose": "Preserve two opposing positions, cite both sides, and keep candidate paths neutral.",
+      "input": {
+        "summary": {
+          "metric_id": "metric-gross-churn",
+          "metric_name": "Gross Churn Rate",
+          "status": "InReview",
+          "source_counts": {
+            "submitted_answers": 2,
+            "alignment_signals": 1,
+            "guided_fields": 1,
+            "missing_evidence_items": 0
+          }
+        },
+        "stakeholder_positions": [
+          {
+            "field_key": "churn_event",
+            "field_label": "Churn event",
+            "stakeholder": {
+              "id": "stakeholder-finance",
+              "name": "Finance Lead"
+            },
+            "definition_id": "definition-finance",
+            "raw_value": "contract_termination",
+            "normalized_value": "contract_termination",
+            "display_value": "Contract termination",
+            "submitted_at": "2026-06-01T09:00:00Z",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:churn_event",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "churn_event",
+                "source_id": "definition-finance",
+                "excerpt": "Contract termination",
+                "meta": {
+                  "submitted_at": "2026-06-01T09:00:00Z"
+                }
+              }
+            ]
+          },
+          {
+            "field_key": "churn_event",
+            "field_label": "Churn event",
+            "stakeholder": {
+              "id": "stakeholder-customer-success",
+              "name": "Customer Success Lead"
+            },
+            "definition_id": "definition-customer-success",
+            "raw_value": "service_end_date",
+            "normalized_value": "service_end_date",
+            "display_value": "Service end date",
+            "submitted_at": "2026-06-01T10:00:00Z",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-customer-success:churn_event",
+                "type": "submitted_answer",
+                "label": "Customer Success Lead answer",
+                "field_key": "churn_event",
+                "source_id": "definition-customer-success",
+                "excerpt": "Service end date",
+                "meta": {
+                  "submitted_at": "2026-06-01T10:00:00Z"
+                }
+              }
+            ]
+          }
+        ],
+        "material_conflicts": [
+          {
+            "id": "field:churn_event:material_conflict",
+            "category": "material_conflict",
+            "field_key": "churn_event",
+            "field_label": "Churn event",
+            "field_role": "definition",
+            "severity": "high",
+            "title": "Stakeholders disagree on Churn event.",
+            "rationale": "Field evidence needs workshop facilitation: Finance uses contract termination while Customer Success uses service end date.",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:churn_event",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "churn_event",
+                "source_id": "definition-finance",
+                "excerpt": "Contract termination"
+              },
+              {
+                "id": "submitted_answer:definition-customer-success:churn_event",
+                "type": "submitted_answer",
+                "label": "Customer Success Lead answer",
+                "field_key": "churn_event",
+                "source_id": "definition-customer-success",
+                "excerpt": "Service end date"
+              },
+              {
+                "id": "field_guidance:churn_event:prompt",
+                "type": "field_guidance",
+                "label": "Workshop prompt",
+                "field_key": "churn_event",
+                "source_id": null,
+                "excerpt": "Which event should officially mark churn for reporting?"
+              },
+              {
+                "id": "field_guidance:churn_event:guidance",
+                "type": "field_guidance",
+                "label": "Workshop guidance",
+                "field_key": "churn_event",
+                "source_id": null,
+                "excerpt": "Confirm one event that Finance and Customer Success can apply consistently."
+              },
+              {
+                "id": "alignment_signal:signal-churn-event:churn_event",
+                "type": "alignment_signal",
+                "label": "Workshop cue",
+                "field_key": "churn_event",
+                "source_id": "signal-churn-event",
+                "excerpt": "Finance uses contract termination while Customer Success uses service end date."
+              }
+            ]
+          }
+        ],
+        "decision_needed": [],
+        "missing_evidence": [],
+        "context_signals": [],
+        "likely_non_issues": [],
+        "recommended_questions": [
+          {
+            "id": "question:churn_event",
+            "field_key": "churn_event",
+            "question": "Which event should officially mark churn for reporting?",
+            "reason": "Stakeholders submitted different positions.",
+            "priority": "high",
+            "source_refs": [
+              {
+                "id": "field_guidance:churn_event:prompt",
+                "type": "field_guidance",
+                "label": "Workshop prompt",
+                "field_key": "churn_event",
+                "source_id": null,
+                "excerpt": "Which event should officially mark churn for reporting?"
+              },
+              {
+                "id": "submitted_answer:definition-finance:churn_event",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "churn_event",
+                "source_id": "definition-finance",
+                "excerpt": "Contract termination"
+              },
+              {
+                "id": "submitted_answer:definition-customer-success:churn_event",
+                "type": "submitted_answer",
+                "label": "Customer Success Lead answer",
+                "field_key": "churn_event",
+                "source_id": "definition-customer-success",
+                "excerpt": "Service end date"
+              }
+            ]
+          }
+        ],
+        "resolution_options": [
+          {
+            "id": "option:churn_event:use-definition-finance",
+            "field_key": "churn_event",
+            "label": "Use Finance Lead position",
+            "description": "Adopt the submitted value 'Contract termination' as the official definition.",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:churn_event",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "churn_event",
+                "source_id": "definition-finance",
+                "excerpt": "Contract termination"
+              }
+            ]
+          },
+          {
+            "id": "option:churn_event:use-definition-customer-success",
+            "field_key": "churn_event",
+            "label": "Use Customer Success Lead position",
+            "description": "Adopt the submitted value 'Service end date' as the official definition.",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-customer-success:churn_event",
+                "type": "submitted_answer",
+                "label": "Customer Success Lead answer",
+                "field_key": "churn_event",
+                "source_id": "definition-customer-success",
+                "excerpt": "Service end date"
+              }
+            ]
+          }
+        ],
+        "draft_alignment_summary": null
+      },
+      "expectations": {
+        "expected_resolution_focus": [
+          {
+            "field_key": "churn_event",
+            "kind": "must_resolve",
+            "source_item_ids": [
+              "field:churn_event:material_conflict"
+            ]
+          }
+        ],
+        "required_supporting_context": [],
+        "forbidden_resolution_focus_field_keys": [],
+        "valid_source_ref_ids": [
+          "submitted_answer:definition-finance:churn_event",
+          "submitted_answer:definition-customer-success:churn_event",
+          "field_guidance:churn_event:prompt",
+          "field_guidance:churn_event:guidance",
+          "alignment_signal:signal-churn-event:churn_event"
+        ],
+        "valid_source_item_ids": [
+          "field:churn_event:material_conflict"
+        ],
+        "valid_source_question_ids": [
+          "question:churn_event"
+        ],
+        "valid_source_option_ids": [
+          "option:churn_event:use-definition-finance",
+          "option:churn_event:use-definition-customer-success"
+        ],
+        "required_citation_sets": [
+          {
+            "claim": "Finance and Customer Success submitted different churn-event positions.",
+            "all_of": [
+              "submitted_answer:definition-finance:churn_event",
+              "submitted_answer:definition-customer-success:churn_event"
+            ]
+          }
+        ],
+        "candidate_path_policy": "input_options_only",
+        "forbidden_claims": [
+          "A compromise event has already been agreed.",
+          "Either submitted position is the recommended final definition.",
+          "The metric has been validated or signed off."
+        ]
+      }
+    },
+    {
+      "id": "missing-evidence-no-history",
+      "purpose": "Preserve the evidence gap and avoid inventing consensus, signed definitions, or workshop decisions.",
+      "input": {
+        "summary": {
+          "metric_id": "metric-pipeline-coverage",
+          "metric_name": "Pipeline Coverage",
+          "status": "InReview",
+          "source_counts": {
+            "submitted_answers": 1,
+            "alignment_signals": 0,
+            "guided_fields": 1,
+            "missing_evidence_items": 1
+          }
+        },
+        "stakeholder_positions": [
+          {
+            "field_key": "open_pipeline_scope",
+            "field_label": "Open pipeline scope",
+            "stakeholder": {
+              "id": "stakeholder-sales",
+              "name": "Sales Lead"
+            },
+            "definition_id": "definition-sales",
+            "raw_value": "stage_2_plus",
+            "normalized_value": "stage_2_plus",
+            "display_value": "Stage 2 and later",
+            "submitted_at": "2026-06-02T09:00:00Z",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-sales:open_pipeline_scope",
+                "type": "submitted_answer",
+                "label": "Sales Lead answer",
+                "field_key": "open_pipeline_scope",
+                "source_id": "definition-sales",
+                "excerpt": "Stage 2 and later"
+              }
+            ]
+          }
+        ],
+        "material_conflicts": [],
+        "decision_needed": [],
+        "missing_evidence": [
+          {
+            "id": "field:open_pipeline_scope:missing_evidence",
+            "category": "missing_evidence",
+            "field_key": "open_pipeline_scope",
+            "field_label": "Open pipeline scope",
+            "field_role": "definition",
+            "severity": "low",
+            "title": "Missing stakeholder answers for Open pipeline scope.",
+            "rationale": "This required or guided field has fewer than two submitted answers to compare.",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-sales:open_pipeline_scope",
+                "type": "submitted_answer",
+                "label": "Sales Lead answer",
+                "field_key": "open_pipeline_scope",
+                "source_id": "definition-sales",
+                "excerpt": "Stage 2 and later"
+              },
+              {
+                "id": "field_guidance:open_pipeline_scope:prompt",
+                "type": "field_guidance",
+                "label": "Workshop prompt",
+                "field_key": "open_pipeline_scope",
+                "source_id": null,
+                "excerpt": "Which opportunity stages count as open pipeline?"
+              },
+              {
+                "id": "field_guidance:open_pipeline_scope:guidance",
+                "type": "field_guidance",
+                "label": "Workshop guidance",
+                "field_key": "open_pipeline_scope",
+                "source_id": null,
+                "excerpt": "Obtain a Finance or Revenue Operations position before treating the scope as aligned."
+              }
+            ]
+          }
+        ],
+        "context_signals": [],
+        "likely_non_issues": [],
+        "recommended_questions": [
+          {
+            "id": "question:open_pipeline_scope",
+            "field_key": "open_pipeline_scope",
+            "question": "Which opportunity stages count as open pipeline?",
+            "reason": "Missing stakeholder answers to compare.",
+            "priority": "low",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-sales:open_pipeline_scope",
+                "type": "submitted_answer",
+                "label": "Sales Lead answer",
+                "field_key": "open_pipeline_scope",
+                "source_id": "definition-sales",
+                "excerpt": "Stage 2 and later"
+              },
+              {
+                "id": "field_guidance:open_pipeline_scope:prompt",
+                "type": "field_guidance",
+                "label": "Workshop prompt",
+                "field_key": "open_pipeline_scope",
+                "source_id": null,
+                "excerpt": "Which opportunity stages count as open pipeline?"
+              }
+            ]
+          }
+        ],
+        "resolution_options": [],
+        "draft_alignment_summary": null
+      },
+      "expectations": {
+        "expected_resolution_focus": [
+          {
+            "field_key": "open_pipeline_scope",
+            "kind": "missing_evidence",
+            "source_item_ids": [
+              "field:open_pipeline_scope:missing_evidence"
+            ]
+          }
+        ],
+        "required_supporting_context": [],
+        "forbidden_resolution_focus_field_keys": [],
+        "valid_source_ref_ids": [
+          "submitted_answer:definition-sales:open_pipeline_scope",
+          "field_guidance:open_pipeline_scope:prompt",
+          "field_guidance:open_pipeline_scope:guidance"
+        ],
+        "valid_source_item_ids": [
+          "field:open_pipeline_scope:missing_evidence"
+        ],
+        "valid_source_question_ids": [
+          "question:open_pipeline_scope"
+        ],
+        "valid_source_option_ids": [],
+        "required_citation_sets": [
+          {
+            "claim": "Only the Sales Lead submitted a position for open pipeline scope.",
+            "all_of": [
+              "submitted_answer:definition-sales:open_pipeline_scope"
+            ]
+          }
+        ],
+        "candidate_path_policy": "none",
+        "forbidden_claims": [
+          "Stage 2 and later is the agreed official scope.",
+          "Finance or Revenue Operations approved the submitted position.",
+          "A signed definition or workshop decision exists.",
+          "The missing stakeholder position can be inferred."
+        ]
+      }
+    },
+    {
+      "id": "guided-aligned-needs-confirmation",
+      "purpose": "Distinguish confirmation from conflict when current submitted values match.",
+      "input": {
+        "summary": {
+          "metric_id": "metric-active-customer",
+          "metric_name": "Active Customer Count",
+          "status": "InReview",
+          "source_counts": {
+            "submitted_answers": 2,
+            "alignment_signals": 0,
+            "guided_fields": 1,
+            "missing_evidence_items": 0
+          }
+        },
+        "stakeholder_positions": [
+          {
+            "field_key": "reporting_cadence",
+            "field_label": "Reporting cadence",
+            "stakeholder": {
+              "id": "stakeholder-finance",
+              "name": "Finance Lead"
+            },
+            "definition_id": "definition-finance",
+            "raw_value": "monthly",
+            "normalized_value": "monthly",
+            "display_value": "Monthly",
+            "submitted_at": "2026-06-02T11:00:00Z",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:reporting_cadence",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "reporting_cadence",
+                "source_id": "definition-finance",
+                "excerpt": "Monthly"
+              }
+            ]
+          },
+          {
+            "field_key": "reporting_cadence",
+            "field_label": "Reporting cadence",
+            "stakeholder": {
+              "id": "stakeholder-operations",
+              "name": "Operations Lead"
+            },
+            "definition_id": "definition-operations",
+            "raw_value": "monthly",
+            "normalized_value": "monthly",
+            "display_value": "Monthly",
+            "submitted_at": "2026-06-02T12:00:00Z",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-operations:reporting_cadence",
+                "type": "submitted_answer",
+                "label": "Operations Lead answer",
+                "field_key": "reporting_cadence",
+                "source_id": "definition-operations",
+                "excerpt": "Monthly"
+              }
+            ]
+          }
+        ],
+        "material_conflicts": [],
+        "decision_needed": [
+          {
+            "id": "field:reporting_cadence:decision_needed",
+            "category": "decision_needed",
+            "field_key": "reporting_cadence",
+            "field_label": "Reporting cadence",
+            "field_role": "governance",
+            "severity": "low",
+            "title": "Confirm official Reporting cadence.",
+            "rationale": "This consensus field has custom workshop guidance that must be confirmed.",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:reporting_cadence",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "reporting_cadence",
+                "source_id": "definition-finance",
+                "excerpt": "Monthly"
+              },
+              {
+                "id": "submitted_answer:definition-operations:reporting_cadence",
+                "type": "submitted_answer",
+                "label": "Operations Lead answer",
+                "field_key": "reporting_cadence",
+                "source_id": "definition-operations",
+                "excerpt": "Monthly"
+              },
+              {
+                "id": "field_guidance:reporting_cadence:prompt",
+                "type": "field_guidance",
+                "label": "Workshop prompt",
+                "field_key": "reporting_cadence",
+                "source_id": null,
+                "excerpt": "Confirm whether monthly reporting is the official cadence."
+              },
+              {
+                "id": "field_guidance:reporting_cadence:guidance",
+                "type": "field_guidance",
+                "label": "Workshop guidance",
+                "field_key": "reporting_cadence",
+                "source_id": null,
+                "excerpt": "Matching submissions are not a signed workshop decision."
+              }
+            ]
+          }
+        ],
+        "missing_evidence": [],
+        "context_signals": [],
+        "likely_non_issues": [],
+        "recommended_questions": [
+          {
+            "id": "question:reporting_cadence",
+            "field_key": "reporting_cadence",
+            "question": "Confirm whether monthly reporting is the official cadence.",
+            "reason": "Field requires workshop confirmation.",
+            "priority": "medium",
+            "source_refs": [
+              {
+                "id": "field_guidance:reporting_cadence:prompt",
+                "type": "field_guidance",
+                "label": "Workshop prompt",
+                "field_key": "reporting_cadence",
+                "source_id": null,
+                "excerpt": "Confirm whether monthly reporting is the official cadence."
+              },
+              {
+                "id": "submitted_answer:definition-finance:reporting_cadence",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "reporting_cadence",
+                "source_id": "definition-finance",
+                "excerpt": "Monthly"
+              },
+              {
+                "id": "submitted_answer:definition-operations:reporting_cadence",
+                "type": "submitted_answer",
+                "label": "Operations Lead answer",
+                "field_key": "reporting_cadence",
+                "source_id": "definition-operations",
+                "excerpt": "Monthly"
+              }
+            ]
+          }
+        ],
+        "resolution_options": [
+          {
+            "id": "option:reporting_cadence:use-definition-finance",
+            "field_key": "reporting_cadence",
+            "label": "Use Finance Lead position",
+            "description": "Adopt the submitted value 'Monthly' as the official definition.",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:reporting_cadence",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "reporting_cadence",
+                "source_id": "definition-finance",
+                "excerpt": "Monthly"
+              }
+            ]
+          }
+        ],
+        "draft_alignment_summary": null
+      },
+      "expectations": {
+        "expected_resolution_focus": [
+          {
+            "field_key": "reporting_cadence",
+            "kind": "needs_confirmation",
+            "source_item_ids": [
+              "field:reporting_cadence:decision_needed"
+            ]
+          }
+        ],
+        "required_supporting_context": [],
+        "forbidden_resolution_focus_field_keys": [],
+        "valid_source_ref_ids": [
+          "submitted_answer:definition-finance:reporting_cadence",
+          "submitted_answer:definition-operations:reporting_cadence",
+          "field_guidance:reporting_cadence:prompt",
+          "field_guidance:reporting_cadence:guidance"
+        ],
+        "valid_source_item_ids": [
+          "field:reporting_cadence:decision_needed"
+        ],
+        "valid_source_question_ids": [
+          "question:reporting_cadence"
+        ],
+        "valid_source_option_ids": [
+          "option:reporting_cadence:use-definition-finance"
+        ],
+        "required_citation_sets": [
+          {
+            "claim": "Finance and Operations submitted matching monthly positions.",
+            "all_of": [
+              "submitted_answer:definition-finance:reporting_cadence",
+              "submitted_answer:definition-operations:reporting_cadence"
+            ]
+          }
+        ],
+        "candidate_path_policy": "input_options_only",
+        "forbidden_claims": [
+          "Stakeholders disagree on reporting cadence.",
+          "Monthly reporting has been signed off or officially approved.",
+          "The matching submissions remove the need for workshop confirmation."
+        ]
+      }
+    },
+    {
+      "id": "conflict-with-context-and-non-issue",
+      "purpose": "Keep context secondary and avoid promoting excluded fields into the resolution focus.",
+      "input": {
+        "summary": {
+          "metric_id": "metric-cost-per-lead",
+          "metric_name": "Cost per Lead",
+          "status": "InReview",
+          "source_counts": {
+            "submitted_answers": 2,
+            "alignment_signals": 2,
+            "guided_fields": 1,
+            "missing_evidence_items": 0
+          }
+        },
+        "stakeholder_positions": [
+          {
+            "field_key": "lead_definition",
+            "field_label": "Lead definition",
+            "stakeholder": {
+              "id": "stakeholder-finance",
+              "name": "Finance Lead"
+            },
+            "definition_id": "definition-finance",
+            "raw_value": "sales_accepted",
+            "normalized_value": "sales_accepted",
+            "display_value": "Sales Accepted Lead",
+            "submitted_at": "2026-06-03T09:00:00Z",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:lead_definition",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "lead_definition",
+                "source_id": "definition-finance",
+                "excerpt": "Sales Accepted Lead"
+              }
+            ]
+          },
+          {
+            "field_key": "lead_definition",
+            "field_label": "Lead definition",
+            "stakeholder": {
+              "id": "stakeholder-marketing",
+              "name": "Marketing Lead"
+            },
+            "definition_id": "definition-marketing",
+            "raw_value": "marketing_qualified",
+            "normalized_value": "marketing_qualified",
+            "display_value": "Marketing Qualified Lead",
+            "submitted_at": "2026-06-03T10:00:00Z",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-marketing:lead_definition",
+                "type": "submitted_answer",
+                "label": "Marketing Lead answer",
+                "field_key": "lead_definition",
+                "source_id": "definition-marketing",
+                "excerpt": "Marketing Qualified Lead"
+              }
+            ]
+          },
+          {
+            "field_key": "sales_cycle_context",
+            "field_label": "Sales cycle context",
+            "stakeholder": {
+              "id": "stakeholder-sales",
+              "name": "Sales Lead"
+            },
+            "definition_id": "definition-sales",
+            "raw_value": "enterprise_cycles_are_longer",
+            "normalized_value": "enterprise_cycles_are_longer",
+            "display_value": "Enterprise cycles are longer",
+            "submitted_at": "2026-06-03T11:00:00Z",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-sales:sales_cycle_context",
+                "type": "submitted_answer",
+                "label": "Sales Lead answer",
+                "field_key": "sales_cycle_context",
+                "source_id": "definition-sales",
+                "excerpt": "Enterprise cycles are longer"
+              }
+            ]
+          },
+          {
+            "field_key": "attribution_window",
+            "field_label": "Attribution window",
+            "stakeholder": {
+              "id": "stakeholder-finance",
+              "name": "Finance Lead"
+            },
+            "definition_id": "definition-finance",
+            "raw_value": "30_days",
+            "normalized_value": "30_days",
+            "display_value": "30 days",
+            "submitted_at": "2026-06-03T09:00:00Z",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:attribution_window",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "attribution_window",
+                "source_id": "definition-finance",
+                "excerpt": "30 days"
+              }
+            ]
+          },
+          {
+            "field_key": "attribution_window",
+            "field_label": "Attribution window",
+            "stakeholder": {
+              "id": "stakeholder-marketing",
+              "name": "Marketing Lead"
+            },
+            "definition_id": "definition-marketing",
+            "raw_value": "90_days",
+            "normalized_value": "90_days",
+            "display_value": "90 days",
+            "submitted_at": "2026-06-03T10:00:00Z",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-marketing:attribution_window",
+                "type": "submitted_answer",
+                "label": "Marketing Lead answer",
+                "field_key": "attribution_window",
+                "source_id": "definition-marketing",
+                "excerpt": "90 days"
+              }
+            ]
+          }
+        ],
+        "material_conflicts": [
+          {
+            "id": "field:lead_definition:material_conflict",
+            "category": "material_conflict",
+            "field_key": "lead_definition",
+            "field_label": "Lead definition",
+            "field_role": "definition",
+            "severity": "high",
+            "title": "Stakeholders disagree on Lead definition.",
+            "rationale": "Field evidence needs workshop facilitation: Finance and Marketing use different funnel stages.",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:lead_definition",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "lead_definition",
+                "source_id": "definition-finance",
+                "excerpt": "Sales Accepted Lead"
+              },
+              {
+                "id": "submitted_answer:definition-marketing:lead_definition",
+                "type": "submitted_answer",
+                "label": "Marketing Lead answer",
+                "field_key": "lead_definition",
+                "source_id": "definition-marketing",
+                "excerpt": "Marketing Qualified Lead"
+              },
+              {
+                "id": "field_guidance:lead_definition:prompt",
+                "type": "field_guidance",
+                "label": "Workshop prompt",
+                "field_key": "lead_definition",
+                "source_id": null,
+                "excerpt": "Which funnel stage is the official lead denominator?"
+              },
+              {
+                "id": "alignment_signal:signal-lead-definition:lead_definition",
+                "type": "alignment_signal",
+                "label": "Workshop cue",
+                "field_key": "lead_definition",
+                "source_id": "signal-lead-definition",
+                "excerpt": "Finance and Marketing use different funnel stages."
+              }
+            ]
+          }
+        ],
+        "decision_needed": [],
+        "missing_evidence": [],
+        "context_signals": [
+          {
+            "id": "field:sales_cycle_context:context_signal",
+            "category": "context_signal",
+            "field_key": "sales_cycle_context",
+            "field_label": "Sales cycle context",
+            "field_role": "context",
+            "severity": "low",
+            "title": "Supporting context for Sales cycle context.",
+            "rationale": "Contains supporting information to explain definition alignments.",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-sales:sales_cycle_context",
+                "type": "submitted_answer",
+                "label": "Sales Lead answer",
+                "field_key": "sales_cycle_context",
+                "source_id": "definition-sales",
+                "excerpt": "Enterprise cycles are longer"
+              }
+            ]
+          }
+        ],
+        "likely_non_issues": [
+          {
+            "id": "field:attribution_window:likely_non_issue",
+            "category": "likely_non_issue",
+            "field_key": "attribution_window",
+            "field_label": "Attribution window",
+            "field_role": "diagnostic",
+            "severity": "medium",
+            "title": "No alignment needed for Attribution window.",
+            "rationale": "This field is either excluded from consensus or has matching positions.",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:attribution_window",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "attribution_window",
+                "source_id": "definition-finance",
+                "excerpt": "30 days"
+              },
+              {
+                "id": "submitted_answer:definition-marketing:attribution_window",
+                "type": "submitted_answer",
+                "label": "Marketing Lead answer",
+                "field_key": "attribution_window",
+                "source_id": "definition-marketing",
+                "excerpt": "90 days"
+              },
+              {
+                "id": "alignment_signal:signal-attribution-window:attribution_window",
+                "type": "alignment_signal",
+                "label": "Workshop cue",
+                "field_key": "attribution_window",
+                "source_id": "signal-attribution-window",
+                "excerpt": "Attribution windows differ but are excluded from consensus."
+              }
+            ]
+          }
+        ],
+        "recommended_questions": [
+          {
+            "id": "question:lead_definition",
+            "field_key": "lead_definition",
+            "question": "Which funnel stage is the official lead denominator?",
+            "reason": "Stakeholders submitted different positions.",
+            "priority": "high",
+            "source_refs": [
+              {
+                "id": "field_guidance:lead_definition:prompt",
+                "type": "field_guidance",
+                "label": "Workshop prompt",
+                "field_key": "lead_definition",
+                "source_id": null,
+                "excerpt": "Which funnel stage is the official lead denominator?"
+              },
+              {
+                "id": "submitted_answer:definition-finance:lead_definition",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "lead_definition",
+                "source_id": "definition-finance",
+                "excerpt": "Sales Accepted Lead"
+              },
+              {
+                "id": "submitted_answer:definition-marketing:lead_definition",
+                "type": "submitted_answer",
+                "label": "Marketing Lead answer",
+                "field_key": "lead_definition",
+                "source_id": "definition-marketing",
+                "excerpt": "Marketing Qualified Lead"
+              }
+            ]
+          }
+        ],
+        "resolution_options": [
+          {
+            "id": "option:lead_definition:use-definition-finance",
+            "field_key": "lead_definition",
+            "label": "Use Finance Lead position",
+            "description": "Adopt the submitted value 'Sales Accepted Lead' as the official definition.",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:lead_definition",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "lead_definition",
+                "source_id": "definition-finance",
+                "excerpt": "Sales Accepted Lead"
+              }
+            ]
+          },
+          {
+            "id": "option:lead_definition:use-definition-marketing",
+            "field_key": "lead_definition",
+            "label": "Use Marketing Lead position",
+            "description": "Adopt the submitted value 'Marketing Qualified Lead' as the official definition.",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-marketing:lead_definition",
+                "type": "submitted_answer",
+                "label": "Marketing Lead answer",
+                "field_key": "lead_definition",
+                "source_id": "definition-marketing",
+                "excerpt": "Marketing Qualified Lead"
+              }
+            ]
+          }
+        ],
+        "draft_alignment_summary": null
+      },
+      "expectations": {
+        "expected_resolution_focus": [
+          {
+            "field_key": "lead_definition",
+            "kind": "must_resolve",
+            "source_item_ids": [
+              "field:lead_definition:material_conflict"
+            ]
+          }
+        ],
+        "required_supporting_context": [
+          {
+            "field_key": "sales_cycle_context",
+            "kind": "context_signal",
+            "source_item_ids": [
+              "field:sales_cycle_context:context_signal"
+            ]
+          }
+        ],
+        "forbidden_resolution_focus_field_keys": [
+          "sales_cycle_context",
+          "attribution_window"
+        ],
+        "valid_source_ref_ids": [
+          "submitted_answer:definition-finance:lead_definition",
+          "submitted_answer:definition-marketing:lead_definition",
+          "field_guidance:lead_definition:prompt",
+          "alignment_signal:signal-lead-definition:lead_definition",
+          "submitted_answer:definition-sales:sales_cycle_context",
+          "submitted_answer:definition-finance:attribution_window",
+          "submitted_answer:definition-marketing:attribution_window",
+          "alignment_signal:signal-attribution-window:attribution_window"
+        ],
+        "valid_source_item_ids": [
+          "field:lead_definition:material_conflict",
+          "field:sales_cycle_context:context_signal",
+          "field:attribution_window:likely_non_issue"
+        ],
+        "valid_source_question_ids": [
+          "question:lead_definition"
+        ],
+        "valid_source_option_ids": [
+          "option:lead_definition:use-definition-finance",
+          "option:lead_definition:use-definition-marketing"
+        ],
+        "required_citation_sets": [
+          {
+            "claim": "Finance and Marketing submitted different lead definitions.",
+            "all_of": [
+              "submitted_answer:definition-finance:lead_definition",
+              "submitted_answer:definition-marketing:lead_definition"
+            ]
+          },
+          {
+            "claim": "Longer enterprise sales cycles are supporting context.",
+            "all_of": [
+              "submitted_answer:definition-sales:sales_cycle_context"
+            ]
+          }
+        ],
+        "candidate_path_policy": "input_options_only",
+        "forbidden_claims": [
+          "Attribution window requires a workshop decision.",
+          "Sales cycle context is itself the official lead-definition conflict.",
+          "A blended funnel-stage compromise is available.",
+          "Either stakeholder position is recommended."
+        ]
+      }
+    },
+    {
+      "id": "aligned-no-action",
+      "purpose": "Avoid manufacturing workshop work when current deterministic evidence contains no actionable item.",
+      "input": {
+        "summary": {
+          "metric_id": "metric-renewal-rate",
+          "metric_name": "Renewal Rate",
+          "status": "InReview",
+          "source_counts": {
+            "submitted_answers": 2,
+            "alignment_signals": 0,
+            "guided_fields": 0,
+            "missing_evidence_items": 0
+          }
+        },
+        "stakeholder_positions": [
+          {
+            "field_key": "measurement_window",
+            "field_label": "Measurement window",
+            "stakeholder": {
+              "id": "stakeholder-finance",
+              "name": "Finance Lead"
+            },
+            "definition_id": "definition-finance",
+            "raw_value": "annual",
+            "normalized_value": "annual",
+            "display_value": "Annual",
+            "submitted_at": "2026-06-04T09:00:00Z",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:measurement_window",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "measurement_window",
+                "source_id": "definition-finance",
+                "excerpt": "Annual"
+              }
+            ]
+          },
+          {
+            "field_key": "measurement_window",
+            "field_label": "Measurement window",
+            "stakeholder": {
+              "id": "stakeholder-customer-success",
+              "name": "Customer Success Lead"
+            },
+            "definition_id": "definition-customer-success",
+            "raw_value": "annual",
+            "normalized_value": "annual",
+            "display_value": "Annual",
+            "submitted_at": "2026-06-04T10:00:00Z",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-customer-success:measurement_window",
+                "type": "submitted_answer",
+                "label": "Customer Success Lead answer",
+                "field_key": "measurement_window",
+                "source_id": "definition-customer-success",
+                "excerpt": "Annual"
+              }
+            ]
+          }
+        ],
+        "material_conflicts": [],
+        "decision_needed": [],
+        "missing_evidence": [],
+        "context_signals": [],
+        "likely_non_issues": [
+          {
+            "id": "field:measurement_window:likely_non_issue",
+            "category": "likely_non_issue",
+            "field_key": "measurement_window",
+            "field_label": "Measurement window",
+            "field_role": "definition",
+            "severity": "low",
+            "title": "No alignment needed for Measurement window.",
+            "rationale": "This field is either excluded from consensus or has matching positions.",
+            "source_refs": [
+              {
+                "id": "submitted_answer:definition-finance:measurement_window",
+                "type": "submitted_answer",
+                "label": "Finance Lead answer",
+                "field_key": "measurement_window",
+                "source_id": "definition-finance",
+                "excerpt": "Annual"
+              },
+              {
+                "id": "submitted_answer:definition-customer-success:measurement_window",
+                "type": "submitted_answer",
+                "label": "Customer Success Lead answer",
+                "field_key": "measurement_window",
+                "source_id": "definition-customer-success",
+                "excerpt": "Annual"
+              }
+            ]
+          }
+        ],
+        "recommended_questions": [],
+        "resolution_options": [],
+        "draft_alignment_summary": null
+      },
+      "expectations": {
+        "expected_resolution_focus": [],
+        "required_supporting_context": [],
+        "allowed_supporting_context_field_keys": [
+          "measurement_window"
+        ],
+        "forbidden_resolution_focus_field_keys": [
+          "measurement_window"
+        ],
+        "valid_source_ref_ids": [
+          "submitted_answer:definition-finance:measurement_window",
+          "submitted_answer:definition-customer-success:measurement_window"
+        ],
+        "valid_source_item_ids": [
+          "field:measurement_window:likely_non_issue"
+        ],
+        "valid_source_question_ids": [],
+        "valid_source_option_ids": [],
+        "required_citation_sets": [
+          {
+            "claim": "Finance and Customer Success submitted matching annual measurement windows.",
+            "all_of": [
+              "submitted_answer:definition-finance:measurement_window",
+              "submitted_answer:definition-customer-success:measurement_window"
+            ]
+          }
+        ],
+        "candidate_path_policy": "none",
+        "forbidden_claims": [
+          "The metric is signed off, validated, or officially approved.",
+          "A workshop decision is required for measurement window.",
+          "A candidate resolution path is needed.",
+          "Matching submissions prove final consensus."
+        ]
+      }
+    }
+  ]
+}
