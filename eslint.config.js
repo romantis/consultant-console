@@ -16,6 +16,7 @@ export default defineConfigWithVueTs(
             'dist',
             'build',
             'coverage',
+            'demo',
             'storage',
             'bootstrap/ssr',
             'bootstrap/cache',

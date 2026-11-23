@@ -1,0 +1,26 @@
+{
+    "name": "consultant-console-static-demo",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc --noEmit && vite build",
+        "preview": "vite preview",
+        "typecheck": "vue-tsc --noEmit",
+        "test:browser": "node scripts/verify-browser.mjs"
+    },
+    "dependencies": {
+        "lucide-vue-next": "^0.468.0",
+        "vue": "^3.5.13"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.1.11",
+        "@vitejs/plugin-vue": "^6.0.0",
+        "puppeteer-core": "^24.4.0",
+        "tailwindcss": "^4.1.11",
+        "typescript": "^5.7.3",
+        "vite": "^7.0.4",
+        "vue-tsc": "^2.2.4"
+    }
+}

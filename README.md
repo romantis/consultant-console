@@ -6,7 +6,41 @@ Metric Harmony Console helps teams agree on how business metrics are defined and
 
 The consultant workbench keeps signed definitions, executive takeaways, and implementation gaps together. The [client handbook](docs/assets/showcase/handbook.png) gives stakeholders a focused view of the approved definitions. The [sample PDF](docs/assets/showcase/metric-handbook.pdf) includes the executive brief, approval history, and follow-up. All three use the same synthetic engagement. The PDF shows the application's standard confidentiality label.
 
-## Run the demo
+## Run the static demo
+
+The Vue demo opens on the MRR discrepancy for **Unit Economics Board Baseline**: Finance wants the month-end close snapshot, RevOps wants a rolling daily view. Choose a snapshot in Workshop, approve it in Handbook Workbench, and see the result in Client Handbook. The bundled PDF was rendered from the seeded month-end definition, so the handbook labels it **Sample PDF** whenever your approved choice differs. **Start over** clears the current decision. Data comes from `GoldenPathExecutiveArtifactStorySeeder` (see `demo/src/data/goldenPath.ts`).
+
+From the repository root, use Node.js 20.19+ on the 20.x line or Node.js 22.12+ and npm:
+
+```bash
+npm ci --prefix demo
+npm run dev --prefix demo
+```
+
+Open the local URL printed by Vite. To build and preview the production bundle:
+
+```bash
+npm run build --prefix demo
+npm run preview --prefix demo
+```
+
+Serve the contents of `demo/dist/` on any static host at the site root or under a subdirectory. The bundle includes the sample PDF and requires no Laravel runtime, database, or login.
+
+With Google Chrome installed, the end-to-end browser check builds the bundle, serves `demo/dist/` from a plain static server under a subdirectory, and covers both MRR choices, approval, handbook publication, PDF labeling, persistence, mobile layout, and **Start over**:
+
+```bash
+npm run test:browser --prefix demo
+```
+
+If Chrome is elsewhere, set `CHROME_PATH`. Without Chrome, download a headless build into the ignored `demo/.browser-check/` folder first:
+
+```bash
+cd demo && npx @puppeteer/browsers install chrome-headless-shell@stable --path .browser-check
+```
+
+Screenshots of each step are written to `demo/.browser-check/screenshots/`.
+
+## Run the full Laravel showcase
 
 Use PHP 8.5 with SQLite support, Composer, Node.js 22 or newer, and npm. Chrome or Chromium is needed to render a new PDF. The seeded views and bundled sample work without external service credentials.
 
